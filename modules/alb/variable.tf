@@ -1,10 +1,10 @@
 variable "vpc_id" {
-  description = "The ID of the VPC"
+  description = "VPC ID to launch the instance in"
   type        = string
+  
 }
-
-variable "subnet_ids" {
-  description = "A list of subnet IDs"
+variable "subnets" {
+  description = "List of subnet IDs to associate with the ALB"
   type        = list(string)
 }
 
@@ -14,6 +14,6 @@ variable "alb_security_group_id" {
 }
 
 variable "instance_id" {
-  description = "The ID of the EC2 instance"
+  description = "The ID of the instance to attach to the target group"
   type        = string
 }
